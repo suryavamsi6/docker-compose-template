@@ -57,7 +57,7 @@
     - size: small
       widgets:
         - type: weather
-          location: London, United Kingdom
+          location: Bangalore, India
           units: metric # alternatively "imperial"
           hour-format: 12h # alternatively "24h"
           # Optionally hide the location from being displayed in the widget
@@ -65,16 +65,14 @@
 
         - type: markets
           markets:
-            - symbol: SPY
-              name: S&P 500
-            - symbol: BTC-USD
-              name: Bitcoin
-            - symbol: NVDA
-              name: NVIDIA
-            - symbol: AAPL
-              name: Apple
-            - symbol: MSFT
-              name: Microsoft
+            - symbol: NIFTY
+              name: ^NSEI
+            - symbol: TATAMOTORS.NS
+              name: TATAMOTORS
+            - symbol: 0P0000XW51.BO
+              name: Quant ELSS Tax Saver Growth Direct
+            - symbol: 0P00017844.BO
+              name: Mirae Asset ELSS Tax Saver Growth Direct
 
         - type: releases
           cache: 1d
@@ -86,3 +84,8 @@
             - go-gitea/gitea
             - immich-app/immich
             - syncthing/syncthing
+        - type: dns-stats
+          service: pihole-v6
+          allow-insecure: true
+          url: http://192.168.0.105/
+          password: ${PASSWORD}
